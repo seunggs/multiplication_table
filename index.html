@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="myApp">
 	<head>
 		<meta lang="EN" charset="UTF-8">
 		
@@ -10,6 +10,14 @@
 
 	</head>
 	<body>
+		<h1>AngularJS fueled multiplication table</h1>
+		<table ng-controller="MultiplicationCtrl">
+			<tr ng-repeat="numberB in numbers">
+				<td ng-repeat="numberA in numbers">
+					{{ numberA * numberB }}
+				</td>
+			</tr>
+		</table>
 
 	<!-- scripts -->
 		<script src="scripts/angular.min.js"></script>
