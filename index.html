@@ -10,15 +10,19 @@
 
 	</head>
 	<body>
-		<h1>AngularJS fueled multiplication table</h1>
-		<table ng-controller="MultiplicationCtrl">
-			<tr ng-repeat="numberB in numbers">
-				<td ng-repeat="numberA in numbers">
-					{{ numberA * numberB }}
-				</td>
-			</tr>
-		</table>
-
+		<div class="wrapper">
+			<div class="container" ng-controller="MultiplicationCtrl" initial-number-limit="10">
+				<h1>AngularJS Fueled Multiplication Table</h1>
+				<input type="number" placeholder="Enter a Number" ng-model="numberLimit">
+				<table>
+					<tr ng-repeat="numberB in numbers">
+						<td ng-repeat="numberA in numbers">
+							{{ compute(numberA, numberB) }}
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
 	<!-- scripts -->
 		<script src="scripts/angular.min.js"></script>
 		<script src="scripts/app.js"></script>
