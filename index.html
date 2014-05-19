@@ -16,7 +16,10 @@
 				<input type="number" placeholder="Enter a Number" ng-model="numberLimit">
 				<table>
 					<tr ng-repeat="numberB in numbers">
-						<td ng-repeat="numberA in numbers">
+						<td ng-repeat="numberA in numbers" 
+								ng-mouseleave="clearActiveFactors()"
+								ng-mouseover="setActiveFactors(numberA, numberB)" 
+								ng-class="{hover: matchesFactor(numberA, numberB)}">
 							{{ compute(numberA, numberB) }}
 						</td>
 					</tr>

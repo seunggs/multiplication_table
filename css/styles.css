@@ -26,3 +26,8 @@ td {
 	width: 45px;
 	height: 45px;
 }
+
+.hover {
+	background-color: #E4F6FF;
+	color: #0079A9;
+}

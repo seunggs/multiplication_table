@@ -14,4 +14,18 @@ angular.module('myApp', [])
 		$scope.compute = function(a, b) {
 			return a * b;
 		};
+
+		var activeFactorA, activeFactorB;
+
+		$scope.clearActiveFactors = function() {
+			activeFactorA = null;
+			activeFactorB = null;
+		};
+		$scope.setActiveFactors = function(a, b) {
+			activeFactorA = a;
+			activeFactorB = b;
+		};
+		$scope.matchesFactor = function(a, b) {
+			return a === activeFactorA || b === activeFactorB;
+		};
 	});
